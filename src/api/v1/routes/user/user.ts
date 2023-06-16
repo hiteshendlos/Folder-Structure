@@ -19,7 +19,16 @@ const  user = (app: Router) => {
    *     summary: Register user
    *     description: Registering superadmin user.
    */
-  route.post("/add",  Controller.User.addUserController);
+  route.post("/",  Controller.User.addUserController);
+  /**
+   * @swagger
+   * /superadmin/register:
+   *   Post:
+   *     tags: [User]
+   *     summary: Register user
+   *     description: Registering superadmin user.
+   */
+  route.get("/",  Controller.User.getUserController);
  
 };
 export default  user;
